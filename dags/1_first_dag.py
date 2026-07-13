@@ -2,10 +2,13 @@ from airflow.sdk import dag, task
 
 
 @dag(
+        # Jadikan fungsi ini sebagai satu rangkaian alur kerja utama.
         dag_id="first_dag",
 )
+
 def first_dag():
 
+    # Jadikan fungsi ini sebagai pekerja mandiri yang mengeksekusi kode python.
     @task.python
     def first_task():
         print("This is the first task")
